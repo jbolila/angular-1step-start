@@ -41,14 +41,20 @@ and how to tell your browser to do this for you automatically.
 
 * [AngularJS Docs](https://docs.angularjs.org)
 * [AngularJS Style Guide][angularjs-styleguide]
+* [Adventures in Angular - 018 Style Guides](http://devchat.tv/adventures-in-angular/018-aia-style-guides)
 * [Learn JavaScript by adventuring around in the terminal][adventure around your editor and terminal]
 * [You Don't Know JS]
 * [MDN JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
+## Books
+
+Just the two best and fundamental books ever, on Javascript (sorry, all other great authors).
+
+* [Principles of Object-Oriented Programming in Javascript](https://leanpub.com/oopinjavascript)
+* [Effective Javascript](http://effectivejs.com/)
 
 
 [angularjs-styleguide]: https://github.com/johnpapa/angularjs-styleguide
-
 [You Don't Know JS]: https://github.com/getify/You-Dont-Know-JS
 [adventure around your editor and terminal]: https://github.com/sethvincent/javascripting
 
