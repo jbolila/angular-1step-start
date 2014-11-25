@@ -1,0 +1,25 @@
+.changed {
+  background-color: white;
+  padding: 0.2em 0.2em;
+}
+.changed-add,
+.changed-remove {
+  background-color: white;
+  transition: linear 1s;
+  -webkit-transition: linear 1s;
+  -moz-transition: linear 1s;
+  -ms-transition: linear 1s;
+  -o-transition: linear 1s;
+}
+.changed-add-active {
+  background-color: green;
+}
+.changed-remove {
+  background-color: green;
+}
+.changed-remove-active {
+  background-color: white;
+}
+.text-danger {
+  color: red;
+}

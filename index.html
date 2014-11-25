@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Angular first steady steps!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css">
+  <link rel="stylesheet" href="app/css/style.css">
+</head>
+
+<body ng-app="my-app" ng-strict-di>
+
+  <!-- the controller -->
+  <div ng-controller="EgCtrl as ctrl">
+    <h2 ng-class="{'animate-class': foo}">
+      <!-- the directive animateOnChange -->
+      <span class="fa-stack fa-3x" animate-on-change="ctrl.counter">
+        <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
+        <!-- the attribute counter from the scope of EgCtrl -->
+        <i class="fa fa-stack-1x text-danger">{{ctrl.counter | number}}</i>
+      </span>
+    </h2>
+
+    <!-- the attribute paused from the scope of EgCtrl -->
+    <div ng-hide="ctrl.paused">
+      <!-- assigne the method pauseCounter() to the click event -->
+      <i class="fa fa-pause fa-2x" ng-click="ctrl.pauseCounter()"></i>  <cite>(the update interval is {{ctrl.interval}}ms.)</cite>
+    </div>
+    <div ng-hide="!ctrl.paused">
+      <!-- assigne the method resumeCounter() to the click event -->
+      <i class="fa fa-play fa-2x" ng-click="ctrl.resumeCounter()" ng-hide="!ctrl.paused"></i>
+      <!-- the attribute interval from the scope of EgCtrl -->
+      <cite>The interval of update is <input ng-model="ctrl.interval" type="number" ng-animate="'animate'"> ms. (change it and resume with the new time interval).</cite>
+    </div>
+  </div>
+
+  <!-- End of App -->
+
+
+  <!-- external dependencies (libraries) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-sanitize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular-animate.js"></script>
+
+  <!-- local dependencies -->
+  <script src="app/js/my-app.js"></script>
+  <script src="app/js/eg-dependency/module.js"></script>
+</body>
+
+</html>

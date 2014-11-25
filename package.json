@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "devDependencies": {
+    "eslint": ">=0.9.2",
+    "livereloadx": ">=0.3.7",
+    "watch-run": ">=1.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "serve": "node_modules/.bin/livereloadx -s -p 9191 .",
+    "watch": "npm run serve",
+
+    "//lint": "node_modules/.bin/watch-run -p 'app/js/**/*.js' node_modules/.bin/eslint --color=true app/js",
+    "//watch": "npm run lint & npm run serve",
+    "//postinstall": "bower install"
+  }
+}

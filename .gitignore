@@ -1,0 +1,10 @@
+node_modules/
+
+### Linux ###
+*~
+
+### OSX ###
+.DS_Store
+
+# Thumbnails
+._*
