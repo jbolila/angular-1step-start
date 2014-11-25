@@ -1,0 +1,35 @@
+{
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "quotes": "single", // Enforce single quotes
+    "strict": [2, "always"], // Require strict mode
+
+    "no-use-before-define": [2, "nofunc"], // Hoisted functions (aren't a problem)
+
+    // (function () { return { y: 1 }; })(); // always
+    "wrap-iife": [2, "inside"],
+
+    // Don't allow console.log  (instead use $log.debug() from Angular)
+    "no-console": true,
+
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+
+    // this is not allowed function (){
+    "no-spaced-func": [2, true],
+
+    // Don't allow [ "hello" ]
+    "space-in-brackets": [2, "never"],
+
+    // There can only be one var statement inside a function
+    "one-var": [0, true],
+
+    // There has to be a space after if:
+    // if () {
+    "space-after-keywords": [2, "always"]
+  },
+  "globals": {
+    "angular": true
+  }
+}
